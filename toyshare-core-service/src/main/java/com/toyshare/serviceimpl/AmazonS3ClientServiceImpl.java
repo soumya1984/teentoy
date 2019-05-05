@@ -56,7 +56,7 @@ public class AmazonS3ClientServiceImpl implements AmazonS3ClientService
             }
             this.amazonS3.putObject(putObjectRequest);
             //removing the file created in the server
-            //file.delete();
+            file.delete();
         } catch (IOException | AmazonServiceException ex) {
             logger.error("error [" + ex.getMessage() + "] occurred while uploading [" + fileName + "] ");
         }
